@@ -415,30 +415,49 @@ namespace Evolve {
 			creature.circleColour(255, 255, 255);
 		}
 	}
+
+    // Value of raiding creatures in vincinity
     class InputRaidValueNode : Node {
         internal RaidNet raidNet = new RaidNet();
         internal List<RaidNet.VictimList> victimList = new List<RaidNet.VictimList>();
 
 		internal override void Update(Creature creature, Map map) {
-			// Judge a creature nearby
-			foreach(Creature potentialVictim in creature.currentTile.creatureResidentList) {
-				bool creatureHasBeenJudged = false;
+            bool creatureHasBeenJudged = false;
+            int index = 0;
+            // Look for a creature to judge on current tile
+            creatureHasBeenJudged = judgePotentialVictimFromList(creature, creature.currentTile.creatureResidentList, map);
+            if(creatureHasBeenJudged == false) {
+                // Look for creature around current tile
+            }
+            do {
+                
+            } while(creatureHasBeenJudged == false && )
+		}
+
+        // Judges any creatures in the potentialVictimList
+        // Returns if a creatures has been judged
+        private bool judgePotentialVictimFromList(Creature selfCreature, List<Creature> potentialVictimList, Map map) {
+			foreach(Creature potentialVictim in potentialVictimList) {
 				// If not myself
-				if(!potentialVictim.Equals(creature)) {
-					// If someone I haven't judged.
-					// Determine if victim has been judged.
-					bool potentialVictimHasBeenJudged = false;
-					foreach(RaidNet.VictimList victimInVictimList in victimList) {
-						if(potentialVictim.Equals(victimInVictimList)) {
-							potentialVictimHasBeenJudged = true;
-							break;
-						}
-					}
-					if(potentialVictimHasBeenJudged == false) {
-					}
+				if(!potentialVictim.Equals(selfCreature)) {
+                    // Search through list to determine if potential victim has already been judged
+                    bool potentialVictimHasBeenJudged = false;
+                    foreach(RaidNet.VictimList victimListVictim in victimList) {
+                        if(victimListVictim.victim.Equals(potentialVictim)) {
+                            potentialVictimHasBeenJudged = true;
+                            break;
+                        }
+                    }
+                    // If victim has not been judged
+                    if(potentialVictimHasBeenJudged == false) {
+                        // Judge victim
+                        raidNet.Update(selfCreature, potentialVictim, map);
+                        return true;
+                    }
 				}
 			}
-		}
+            return false;
+        }
 	}
 
     // Raid Nodes
