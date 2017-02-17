@@ -148,7 +148,6 @@ namespace Evolve {
             this.labelTile = new System.Windows.Forms.Label();
             this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.labelFrameRate = new System.Windows.Forms.Label();
-            this.map = new Evolve.Map();
             this.toolStripMapFilter = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonFood = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonOre = new System.Windows.Forms.ToolStripButton();
@@ -1562,7 +1561,6 @@ namespace Evolve {
             // toolStripContainer.ContentPanel
             // 
             this.toolStripContainer.ContentPanel.Controls.Add(this.labelFrameRate);
-            this.toolStripContainer.ContentPanel.Controls.Add(this.map);
             this.toolStripContainer.ContentPanel.Margin = new System.Windows.Forms.Padding(2);
             this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(1066, 649);
             this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1586,24 +1584,6 @@ namespace Evolve {
             this.labelFrameRate.Size = new System.Drawing.Size(27, 13);
             this.labelFrameRate.TabIndex = 2;
             this.labelFrameRate.Text = "num";
-            // 
-            // map
-            // 
-            this.map.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.map.Location = new System.Drawing.Point(0, 0);
-            this.map.Margin = new System.Windows.Forms.Padding(2);
-            this.map.Name = "map";
-            this.map.Size = new System.Drawing.Size(1066, 649);
-            this.map.TabIndex = 1;
-            this.map.Text = "map";
-            this.map.KeyDown += new System.Windows.Forms.KeyEventHandler(this.map_KeyDown);
-            this.map.KeyUp += new System.Windows.Forms.KeyEventHandler(this.map_KeyUp);
-            this.map.MouseDown += new System.Windows.Forms.MouseEventHandler(this.map_MouseDown);
-            this.map.MouseEnter += new System.EventHandler(this.map_MouseEnter);
-            this.map.MouseLeave += new System.EventHandler(this.map_MouseLeave);
-            this.map.MouseMove += new System.Windows.Forms.MouseEventHandler(this.map_MouseMove);
-            this.map.MouseUp += new System.Windows.Forms.MouseEventHandler(this.map_MouseUp);
-            this.map.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.map_MouseWheel);
             // 
             // toolStripMapFilter
             // 
