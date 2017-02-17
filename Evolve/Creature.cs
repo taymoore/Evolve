@@ -12,7 +12,7 @@ namespace Evolve {
 
 		// Let creatureAge be the initial lifespan of the creatures (example shows creatureAge = 600 (30 seconds))
 		internal static readonly int creatureAgeMax = 300;
-		private int creatureAge = 0;
+		internal int creatureAge = 0;
 
 		// Let creatureAverageFarmSkill = The average expected farming skill of creatures
 		//creatureAverageFarmSkill = (3 * skillImprovementRate * creatureAge) / (4 * farmDuration)
