@@ -33,15 +33,19 @@ namespace Evolve {
             this.labelResources = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.labelOreOwned = new System.Windows.Forms.Label();
+            this.labelOreOwnedValue = new System.Windows.Forms.Label();
+            this.labelAgeOwned = new System.Windows.Forms.Label();
+            this.labelAgeOwnedValue = new System.Windows.Forms.Label();
             this.labelFoodOwnedValue = new System.Windows.Forms.Label();
             this.labelFoodOwned = new System.Windows.Forms.Label();
-            this.labelOreOwnedValue = new System.Windows.Forms.Label();
             this.labelSkills = new System.Windows.Forms.Label();
             this.tableLayoutPanelSkills = new System.Windows.Forms.TableLayoutPanel();
             this.labelSkillMining = new System.Windows.Forms.Label();
-            this.labelSkillFarmingValue = new System.Windows.Forms.Label();
             this.labelSkillFarming = new System.Windows.Forms.Label();
             this.labelSkillMiningValue = new System.Windows.Forms.Label();
+            this.labelSkillFighting = new System.Windows.Forms.Label();
+            this.labelSkillFarmingValue = new System.Windows.Forms.Label();
+            this.labelSkillFightingValue = new System.Windows.Forms.Label();
             this.labelThoughts = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.labelActivity = new System.Windows.Forms.Label();
@@ -144,15 +148,11 @@ namespace Evolve {
             this.labelTile = new System.Windows.Forms.Label();
             this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.labelFrameRate = new System.Windows.Forms.Label();
+            this.map = new Evolve.Map();
             this.toolStripMapFilter = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonFood = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonOre = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonGold = new System.Windows.Forms.ToolStripButton();
-            this.labelAgeOwned = new System.Windows.Forms.Label();
-            this.labelAgeOwnedValue = new System.Windows.Forms.Label();
-            this.labelSkillFighting = new System.Windows.Forms.Label();
-            this.labelSkillFightingValue = new System.Windows.Forms.Label();
-            this.map = new Evolve.Map();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -280,6 +280,37 @@ namespace Evolve {
             this.labelOreOwned.TabIndex = 14;
             this.labelOreOwned.Text = "Ore:";
             // 
+            // labelOreOwnedValue
+            // 
+            this.labelOreOwnedValue.AutoSize = true;
+            this.labelOreOwnedValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelOreOwnedValue.Location = new System.Drawing.Point(42, 20);
+            this.labelOreOwnedValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelOreOwnedValue.Name = "labelOreOwnedValue";
+            this.labelOreOwnedValue.Size = new System.Drawing.Size(27, 13);
+            this.labelOreOwnedValue.TabIndex = 14;
+            this.labelOreOwnedValue.Text = "num";
+            // 
+            // labelAgeOwned
+            // 
+            this.labelAgeOwned.AutoSize = true;
+            this.labelAgeOwned.Location = new System.Drawing.Point(3, 40);
+            this.labelAgeOwned.Name = "labelAgeOwned";
+            this.labelAgeOwned.Size = new System.Drawing.Size(29, 13);
+            this.labelAgeOwned.TabIndex = 15;
+            this.labelAgeOwned.Text = "Age:";
+            // 
+            // labelAgeOwnedValue
+            // 
+            this.labelAgeOwnedValue.AutoSize = true;
+            this.labelAgeOwnedValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelAgeOwnedValue.Location = new System.Drawing.Point(42, 40);
+            this.labelAgeOwnedValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelAgeOwnedValue.Name = "labelAgeOwnedValue";
+            this.labelAgeOwnedValue.Size = new System.Drawing.Size(27, 13);
+            this.labelAgeOwnedValue.TabIndex = 15;
+            this.labelAgeOwnedValue.Text = "num";
+            // 
             // labelFoodOwnedValue
             // 
             this.labelFoodOwnedValue.AutoSize = true;
@@ -299,17 +330,6 @@ namespace Evolve {
             this.labelFoodOwned.Size = new System.Drawing.Size(34, 13);
             this.labelFoodOwned.TabIndex = 12;
             this.labelFoodOwned.Text = "Food:";
-            // 
-            // labelOreOwnedValue
-            // 
-            this.labelOreOwnedValue.AutoSize = true;
-            this.labelOreOwnedValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.labelOreOwnedValue.Location = new System.Drawing.Point(42, 20);
-            this.labelOreOwnedValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelOreOwnedValue.Name = "labelOreOwnedValue";
-            this.labelOreOwnedValue.Size = new System.Drawing.Size(27, 13);
-            this.labelOreOwnedValue.TabIndex = 14;
-            this.labelOreOwnedValue.Text = "num";
             // 
             // labelSkills
             // 
@@ -354,17 +374,6 @@ namespace Evolve {
             this.labelSkillMining.TabIndex = 14;
             this.labelSkillMining.Text = "Mining";
             // 
-            // labelSkillFarmingValue
-            // 
-            this.labelSkillFarmingValue.AutoSize = true;
-            this.labelSkillFarmingValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.labelSkillFarmingValue.Location = new System.Drawing.Point(55, 0);
-            this.labelSkillFarmingValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelSkillFarmingValue.Name = "labelSkillFarmingValue";
-            this.labelSkillFarmingValue.Size = new System.Drawing.Size(27, 13);
-            this.labelSkillFarmingValue.TabIndex = 13;
-            this.labelSkillFarmingValue.Text = "num";
-            // 
             // labelSkillFarming
             // 
             this.labelSkillFarming.AutoSize = true;
@@ -384,6 +393,37 @@ namespace Evolve {
             this.labelSkillMiningValue.Size = new System.Drawing.Size(27, 13);
             this.labelSkillMiningValue.TabIndex = 14;
             this.labelSkillMiningValue.Text = "num";
+            // 
+            // labelSkillFighting
+            // 
+            this.labelSkillFighting.AutoSize = true;
+            this.labelSkillFighting.Location = new System.Drawing.Point(3, 40);
+            this.labelSkillFighting.Name = "labelSkillFighting";
+            this.labelSkillFighting.Size = new System.Drawing.Size(44, 13);
+            this.labelSkillFighting.TabIndex = 15;
+            this.labelSkillFighting.Text = "Fighting";
+            // 
+            // labelSkillFarmingValue
+            // 
+            this.labelSkillFarmingValue.AutoSize = true;
+            this.labelSkillFarmingValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelSkillFarmingValue.Location = new System.Drawing.Point(55, 0);
+            this.labelSkillFarmingValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSkillFarmingValue.Name = "labelSkillFarmingValue";
+            this.labelSkillFarmingValue.Size = new System.Drawing.Size(27, 13);
+            this.labelSkillFarmingValue.TabIndex = 13;
+            this.labelSkillFarmingValue.Text = "num";
+            // 
+            // labelSkillFightingValue
+            // 
+            this.labelSkillFightingValue.AutoSize = true;
+            this.labelSkillFightingValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.labelSkillFightingValue.Location = new System.Drawing.Point(55, 40);
+            this.labelSkillFightingValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelSkillFightingValue.Name = "labelSkillFightingValue";
+            this.labelSkillFightingValue.Size = new System.Drawing.Size(27, 13);
+            this.labelSkillFightingValue.TabIndex = 15;
+            this.labelSkillFightingValue.Text = "num";
             // 
             // labelThoughts
             // 
@@ -1547,6 +1587,24 @@ namespace Evolve {
             this.labelFrameRate.TabIndex = 2;
             this.labelFrameRate.Text = "num";
             // 
+            // map
+            // 
+            this.map.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.map.Location = new System.Drawing.Point(0, 0);
+            this.map.Margin = new System.Windows.Forms.Padding(2);
+            this.map.Name = "map";
+            this.map.Size = new System.Drawing.Size(1066, 649);
+            this.map.TabIndex = 1;
+            this.map.Text = "map";
+            this.map.KeyDown += new System.Windows.Forms.KeyEventHandler(this.map_KeyDown);
+            this.map.KeyUp += new System.Windows.Forms.KeyEventHandler(this.map_KeyUp);
+            this.map.MouseDown += new System.Windows.Forms.MouseEventHandler(this.map_MouseDown);
+            this.map.MouseEnter += new System.EventHandler(this.map_MouseEnter);
+            this.map.MouseLeave += new System.EventHandler(this.map_MouseLeave);
+            this.map.MouseMove += new System.Windows.Forms.MouseEventHandler(this.map_MouseMove);
+            this.map.MouseUp += new System.Windows.Forms.MouseEventHandler(this.map_MouseUp);
+            this.map.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.map_MouseWheel);
+            // 
             // toolStripMapFilter
             // 
             this.toolStripMapFilter.Dock = System.Windows.Forms.DockStyle.None;
@@ -1601,64 +1659,6 @@ namespace Evolve {
             this.toolStripButtonGold.Text = "toolStripButton3";
             this.toolStripButtonGold.ToolTipText = "Show Gold Layer";
             this.toolStripButtonGold.CheckedChanged += new System.EventHandler(this.toolStripButtonGold_CheckedChanged);
-            // 
-            // labelAgeOwned
-            // 
-            this.labelAgeOwned.AutoSize = true;
-            this.labelAgeOwned.Location = new System.Drawing.Point(3, 40);
-            this.labelAgeOwned.Name = "labelAgeOwned";
-            this.labelAgeOwned.Size = new System.Drawing.Size(29, 13);
-            this.labelAgeOwned.TabIndex = 15;
-            this.labelAgeOwned.Text = "Age:";
-            // 
-            // labelAgeOwnedValue
-            // 
-            this.labelAgeOwnedValue.AutoSize = true;
-            this.labelAgeOwnedValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.labelAgeOwnedValue.Location = new System.Drawing.Point(42, 40);
-            this.labelAgeOwnedValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelAgeOwnedValue.Name = "labelAgeOwnedValue";
-            this.labelAgeOwnedValue.Size = new System.Drawing.Size(27, 13);
-            this.labelAgeOwnedValue.TabIndex = 15;
-            this.labelAgeOwnedValue.Text = "num";
-            // 
-            // labelSkillFighting
-            // 
-            this.labelSkillFighting.AutoSize = true;
-            this.labelSkillFighting.Location = new System.Drawing.Point(3, 40);
-            this.labelSkillFighting.Name = "labelSkillFighting";
-            this.labelSkillFighting.Size = new System.Drawing.Size(44, 13);
-            this.labelSkillFighting.TabIndex = 15;
-            this.labelSkillFighting.Text = "Fighting";
-            // 
-            // labelSkillFightingValue
-            // 
-            this.labelSkillFightingValue.AutoSize = true;
-            this.labelSkillFightingValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.labelSkillFightingValue.Location = new System.Drawing.Point(55, 40);
-            this.labelSkillFightingValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelSkillFightingValue.Name = "labelSkillFightingValue";
-            this.labelSkillFightingValue.Size = new System.Drawing.Size(27, 13);
-            this.labelSkillFightingValue.TabIndex = 15;
-            this.labelSkillFightingValue.Text = "num";
-            // 
-            // map
-            // 
-            this.map.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.map.Location = new System.Drawing.Point(0, 0);
-            this.map.Margin = new System.Windows.Forms.Padding(2);
-            this.map.Name = "map";
-            this.map.Size = new System.Drawing.Size(1066, 649);
-            this.map.TabIndex = 1;
-            this.map.Text = "map";
-            this.map.KeyDown += new System.Windows.Forms.KeyEventHandler(this.map_KeyDown);
-            this.map.KeyUp += new System.Windows.Forms.KeyEventHandler(this.map_KeyUp);
-            this.map.MouseDown += new System.Windows.Forms.MouseEventHandler(this.map_MouseDown);
-            this.map.MouseEnter += new System.EventHandler(this.map_MouseEnter);
-            this.map.MouseLeave += new System.EventHandler(this.map_MouseLeave);
-            this.map.MouseMove += new System.Windows.Forms.MouseEventHandler(this.map_MouseMove);
-            this.map.MouseUp += new System.Windows.Forms.MouseEventHandler(this.map_MouseUp);
-            this.map.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.map_MouseWheel);
             // 
             // MainWindow
             // 
