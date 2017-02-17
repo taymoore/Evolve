@@ -40,11 +40,13 @@ namespace Evolve {
 			if(map.selectedCreature != null) {
 				labelFoodOwnedValue.Text = String.Format("{0:0.}", map.selectedCreature.food);
 				labelOreOwnedValue.Text = String.Format("{0:0.}", map.selectedCreature.ore);
+                labelAgeOwnedValue.Text = String.Format("{0:0.}", map.selectedCreature.creatureAge);
 
-				labelSkillFarmingValue.Text = String.Format("{0:0.}", map.selectedCreature.farmSkill);
+                labelSkillFarmingValue.Text = String.Format("{0:0.}", map.selectedCreature.farmSkill);
 				labelSkillMiningValue.Text = String.Format("{0:0.}", map.selectedCreature.mineSkill);
+                labelSkillFightingValue.Text = String.Format("{0:0.}", map.selectedCreature.fightSkill);
 
-				switch(map.selectedCreature.activity) {
+                switch (map.selectedCreature.activity) {
 					case Creature.Activity.FARM:
 						labelActivityValue.Text = String.Format("Farm");
 						break;
